@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Concepts Showcase</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #ec5e16, #00f2fe);
+      padding: 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    section {
+      padding: 2rem;
+      margin: 1rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #030608;
+    }
+
+    /* 1. CSS Units Demo */
+    .unit-box {
+      width: 50vw;
+      height: 10vh;
+      background-color: #f7787e;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      padding: 1em;
+    }
+
+    /* 2. CSS Grid - Collecting Random Items */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+
+    .grid-item {
+      background-color: #74c9d4;
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    /* 3. Gallery with Hover Effects */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      width: 200px;
+      height: 150px;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s, filter 0.3s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+      filter: grayscale(100%) brightness(80%);
+    }
+
+    .gallery-item::after {
+      content: "Hovered!";
+      position: absolute;
+      color: white;
+      font-weight: bold;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover::after {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    /* 4. Masking Example */
+    .masked {
+      width: 300px;
+      height: 300px;
+      background: url('https://picsum.photos/300/300') no-repeat center;
+      background-size: cover;
+      mask-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Star_symbol.svg/1200px-Star_symbol.svg.png');
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      -webkit-mask-image: inherit;
+    }
+
+    /* 5. Shape Outside Example */
+    .shape-wrapper {
+      display: flex;
+    }
+
+    .shape-img {
+      float: left;
+      shape-outside: circle(50%);
+      clip-path: circle(50%);
+      width: 200px;
+      height: 200px;
+      margin-right: 20px;
+      -webkit-shape-outside: circle(50%);
+    }
+
+    .shape-img img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    /* 6. Scroll Snapping */
+    .scroll-container {
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+    }
+
+    .scroll-item {
+      scroll-snap-align: center;
+      flex: 0 0 auto;
+      width: 300px;
+      height: 200px;
+      background-color: #dcedc8;
+      border-radius: 8px;
+      text-align: center;
+      line-height: 200px;
+      font-size: 1.5rem;
+    }
+
+    .scroll-container::-webkit-scrollbar {
+      height: 10px;
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb {
+      background-color: #90caf9;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #a934b9;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>CSS Mastery Project</h1>
+    <p>Exploring CSS Units, Grid, Hover Effects, Masking, Shapes, and Scroll Snap</p>
+  </header>
+
+  <section>
+    <h2>1. CSS Units</h2>
+    <div class="unit-box">This box uses vw and vh!</div>
+    <p style="font-size: 1rem;">This text uses <code>rem</code></p>
+    <p style="font-size: 1em;">This text uses <code>em</code></p>
+    <p style="font-size: 20px;">This text uses <code>px</code></p>
+  </section>
+
+  <section>
+    <h2>2. Collecting Random Items - CSS Grid</h2>
+    <div class="grid-container">
+      <div class="grid-item">Item 1</div>
+      <div class="grid-item">Item 2</div>
+      <div class="grid-item">Item 3</div>
+      <div class="grid-item">Item 4</div>
+      <div class="grid-item">Item 5</div>
+      <div class="grid-item">Item 6</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>3. Gallery with Hover Effects</h2>
+    <div class="gallery">
+      <div class="gallery-item"><img src="https://picsum.photos/id/1018/200/150" alt="Gallery 1"></div>
+      <div class="gallery-item"><img src="https://picsum.photos/id/1015/200/150" alt="Gallery 2"></div>
+      <div class="gallery-item"><img src="https://picsum.photos/id/1025/200/150" alt="Gallery 3"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>4. Masking</h2>
+    <div class="masked"></div>
+  </section>
+
+  <section>
+    <h2>5. Shape Outside</h2>
+    <div class="shape-wrapper">
+      <div class="shape-img">
+        <img src="https://picsum.photos/200" alt="Circular Image">
+      </div>
+      <p>
+        This text wraps around the circular image using <code>shape-outside</code>. This CSS property allows the text to flow naturally around a non-rectangular image shape, creating visually appealing layouts in articles and designs.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>6. Scroll Snap Gallery</h2>
+    <div class="scroll-container">
+      <div class="scroll-item">Snap 1</div>
+      <div class="scroll-item">Snap 2</div>
+      <div class="scroll-item">Snap 3</div>
+      <div class="scroll-item">Snap 4</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Made with ❤️ using pure HTML and CSS. Making By Ragini❤️ </p>
+  </footer>
+
+</body>
+</html>
