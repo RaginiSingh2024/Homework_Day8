@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <title> Hover Effect</title>
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.logo-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 300px;
+  height: 350px;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease-in-out, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.logo:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="logo-container">
+    <img src="https://i.pinimg.com/736x/91/55/23/915523d0f0b52cc73fe5e2d08b5f34ad.jpg " alt="rs" class="logo" />
+    <img src="https://i.pinimg.com/736x/1e/04/50/1e04503e19de54bb3217b0ecc03bc97f.jpg" alt="vk" class="logo" />
+    <img src="https://i.pinimg.com/736x/a5/3e/3c/a53e3cfd421dca756406fd70a1705252.jpg" alt="hp" class="logo" />
+    <img src="https://i.pinimg.com/736x/1f/9f/c1/1f9fc138db49589a289ca0c020ab9c74.jpg" alt="jb" class="logo" />
+  </div>
+</body>
+</html>
