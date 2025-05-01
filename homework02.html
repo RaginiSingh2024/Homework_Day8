@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Collecting Random Items</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f6f6f6;
+  color: #000;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background: #f6f6f6;
+  padding: 20px;
+  max-width: 900px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.grid-section .grid,
+.masonry {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 10px 20px rgb(255, 0, 0);
+}
+
+.card img {
+  width: 50px;
+  height: 60px;
+  margin-bottom: 0.5rem;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  margin: 1rem 0;
+}
+footer{
+    text-align: center;
+    font-size: x-large;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Collecting Random Items</h1>
+    <p class=subtitle>Discover random items we are collecting today. Who knows what we might find?</p>
+
+    <div class="grid-section">
+      <div class="grid">
+        <div class="card">
+          <img src="https://i.pinimg.com/736x/06/e5/20/06e5205c5231dc5f3cc8ab0d346ff092.jpg" alt="Socks" />
+          <h3>Socks</h3>
+          <p>The mystery of always losing one sock...</p>
+        </div>
+        <div class="card">
+          <img src="https://i.pinimg.com/736x/67/cd/c1/67cdc1683f91f9916de003ca3c94ef57.jpg" alt="Coffee" />
+          <h3>Coffee Cups</h3>
+          <p>Why do we always have 10 half-drunk coffee cups?</p>
+        </div>
+        <div class="card">
+          <img src="https://i.pinimg.com/736x/7b/b0/5a/7bb05a89c15937fdd2755674a44d0c6b.jpg" alt="Pizza" />
+          <h3>Pizza Boxes</h3>
+          <p>The only thing better than pizza is more pizza.</p>
+        </div>
+        <div class="card">
+          <img src="https://i.pinimg.com/736x/75/94/e9/7594e99c7cf5eed21655953b9e7a3e7c.jpg" alt="Cookies" />
+          <h3>Cookies</h3>
+          <p>Warning: May cause sugar rush and crumbs.</p>
+        </div>
+        <div class="card">
+          <img src="https://i.pinimg.com/736x/38/0f/b8/380fb83fdf947f3a2650bd65381903c6.jpg" alt="Toys" />
+          <h3>Toys</h3>
+          <p>Do these toys ever get used? Who knows.</p>
+        </div>
+        <div class="card">
+          <img src="https://i.pinimg.com/736x/3d/ec/b3/3decb3de528c52bb19d8dceb271ff4df.jpg" alt="Plants" />
+          <h3>Plants</h3>
+          <p>They never stop growing, just like your love for them!</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Masonry Layout Mode!</h2>
+    <div class="masonry">
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/5e/76/f3/5e76f30fd83bb5d0392d94e0d6384ccb.jpg" alt="Laptop" />
+        <h3>Laptops</h3>
+        <p>How many laptops can one person have?</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/8e/1c/37/8e1c3744a4f11b8a6d5d053c59e9a75c.jpg" alt="Phone" />
+        <h3>Phones</h3>
+        <p>Who knew they would outlast friendships?</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/e7/d8/78/e7d87844b17b931dfe481fafe756ff1f.jpg" alt="Toothbrush" />
+        <h3>Toothbrushes</h3>
+        <p>How many toothbrushes do you really need?</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/a0/50/40/a050401a6437cba929b52f0d5eb1438e.jpg" alt="Books" />
+        <h3>Books</h3>
+        <p>A library inside every home.</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/9c/5b/57/9c5b57e85040cc03d1cd5ac95245d258.jpg" alt="Shoes" />
+        <h3>Shoes</h3>
+        <p>Matching shoes? Never.</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/fe/d4/cc/fed4ccaa51ab5bdc3a5de814ca65fef6.jpg" alt="Hat" />
+        <h3>Hats</h3>
+        <p>Just one hat, they said. You don’t need more...</p>
+      </div>
+    </div>
+    <footer>
+        &copy; 2025 Atharva Gahine 
+      </footer>
+  </div>
+  
+</body>
+</html>
