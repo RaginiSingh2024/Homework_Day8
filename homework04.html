@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Masking with mask-image</title>
+  <style>
+    body {
+  background: #000000;
+  color: #fff;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 150px;
+}
+
+.masking-section {
+  background: #ff8800;
+  color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 1000px;
+}
+
+.image-row {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.image {
+  width: 400px;
+  height: auto;
+  border-radius: 6px;
+}
+
+.masked {
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+h1{
+    text-align: center;
+}
+
+  </style>
+</head>
+<body>
+   
+  <div class="masking-section">
+    <h1>छत्रपती शिवाजी महाराज 🚩</h1>
+    <div class="image-row">
+      <img src="https://i.pinimg.com/736x/d8/11/13/d8111354983d0968603a9bd64eb62d8d.jpg" alt="Original" class="image" />
+      <img src="https://i.pinimg.com/736x/d8/11/13/d8111354983d0968603a9bd64eb62d8d.jpg" alt="Masked" class="image masked" />
+    </div>
+  </div>
+</body>
+</html>
